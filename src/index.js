@@ -26,10 +26,10 @@ _.extend(SpellCheckProvider.prototype, {
     if (_.contains(skipWords, text)) return true;
 
     var textIsMisspelled = spellchecker.isMisspelled(text);
-    if (textIsMisspelled) {
+    if (!textIsMisspelled) {
       this.emit('misspelling', spellchecker.getCorrectionsForMisspelling(text));
     }
-    return !textIsMisspelled;
+    return textIsMisspelled;
   }
 });
 
