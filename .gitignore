@@ -24,7 +24,7 @@ coverage
 build/Release
 
 # Dependency directory
-node_modules
+/node_modules
 !/SpellCheckDemoApp-darwin-*
 
 # Optional npm cache directory
