@@ -1,0 +1,22 @@
+{
+  "name": "spellcheck",
+  "version": "1.0.0",
+  "description": "a sample app to access the native OS spell checking capability through node",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"test command run\" && exit 1",
+    "buildApp": "electron-packager . SpellCheckDemoApp --all"
+  },
+  "author": "Akhilesh",
+  "license": "ISC",
+  "devDependencies": {
+    "electron-packager": "^7.3.0",
+    "electron-prebuilt": "^1.2.7",
+    "electron-rebuild": "^1.1.5"
+  },
+  "dependencies": {
+    "electron-editor-context-menu": "^1.1.1",
+    "electron-spell-check-provider": "git://github.com/akhilesh4ever/electron-spell-check-provider.git"
+  }
+}
