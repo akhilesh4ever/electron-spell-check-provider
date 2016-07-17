@@ -25,8 +25,8 @@ _.extend(SpellCheckProvider.prototype, {
     var skipWords = SKIP_WORDS[this._language];
     if (_.contains(skipWords, text)) return true;
 
-    var textIsMisspelled = !spellchecker.isMisspelled(text);
-    if (textIsMisspelled) {
+      var textIsMisspelled = (""!==spellchecker.isMisspelled(text)) && (true!==spellchecker.isMisspelled(text));
+      if (textIsMisspelled) {
       this.emit('misspelling', spellchecker.getCorrectionsForMisspelling(text));
     }
     return !textIsMisspelled;
